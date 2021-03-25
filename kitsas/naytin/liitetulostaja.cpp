@@ -23,10 +23,15 @@
 #include <QPagedPaintDevice>
 #include <QPainter>
 
-#include <poppler/qt5/poppler-qt5.h>
 #include <QGraphicsPixmapItem>
 #include <QImage>
 #include <QRegularExpression>
+
+#ifdef Q_OS_MACX
+#include "pdf.h"
+#else
+#include <poppler/qt5/poppler-qt5.h>
+#endif
 
 #include <QDebug>
 

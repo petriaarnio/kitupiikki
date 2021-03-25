@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#include "pdf.h"
+
 static void DrawPdfPage (CGContextRef context, CGPDFDocumentRef document, size_t pageNumber);
 static CGContextRef CreateBitmapContext(int pixelsWide, int pixelsHigh);
 
@@ -34,6 +36,17 @@ void CreatePDFDocument(UInt8 *data, CFIndex length)
     }
 
     pdfDocument = document;
+}
+
+bool PdfExists()
+{
+    return pdfDocument != NULL;
+}
+
+
+size_t NumPages()
+{
+    return pdfDocument ? CGPDFDocumentGetNumberOfPages(pdfDocument) : 0;
 }
 
 void DeletePdfDocument() {
@@ -89,4 +102,29 @@ static CGContextRef CreateBitmapContext(int pixelsWide, int pixelsHigh)
     CGColorSpaceRelease( colorSpace );
     
     return context;
+}
+
+namespace Poppler {
+    Document *Document::loadFromData(const QByteArray &fileContents)
+    {
+    }
+    
+    void Document::setRenderHint(RenderHint hint)
+    {
+    
+    }
+
+    int Document::numPages() const {
+        
+    }
+    
+    Page *Document::page(int index) const
+    {
+        
+    }
+    
+    QString Document::info(const QString &type) const
+    {
+        
+    }
 }

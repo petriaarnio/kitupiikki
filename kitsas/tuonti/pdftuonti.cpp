@@ -26,7 +26,11 @@
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
 
+#ifdef Q_OS_MACX
+#include "pdf.h"
+#else
 #include <poppler/qt5/poppler-qt5.h>
+#endif
 
 
 #include "pdftuonti.h"

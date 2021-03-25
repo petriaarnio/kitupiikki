@@ -16,13 +16,18 @@
 */
 #include "pdfview.h"
 
-#include <poppler/qt5/poppler-qt5.h>
 #include <QGraphicsPixmapItem>
 #include <QPrinter>
 #include <QPainter>
 #include <QGraphicsSimpleTextItem>
 #include "db/kirjanpito.h"
 #include <QSettings>
+
+#ifdef Q_OS_MACX
+#include "pdf.h"
+#else
+#include <poppler/qt5/poppler-qt5.h>
+#endif
 
 Naytin::PdfView::PdfView(const QByteArray &pdf) :
     data_(pdf)

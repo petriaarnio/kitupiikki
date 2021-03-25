@@ -29,7 +29,11 @@
 #include <QSettings>
 #include <QPdfWriter>
 #include <QImage>
+#ifdef Q_OS_MACX
+#include "pdf.h"
+#else
 #include <poppler/qt5/poppler-qt5.h>
+#endif
 
 #include "db/tositetyyppimodel.h"
 #include "tuonti/pdftuonti.h"
