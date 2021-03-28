@@ -10,6 +10,9 @@
 #define pdf_h
 #include <QByteArray>
 #include <QString>
+#include <QImage>
+#include <QSizeF>
+#include <QList>
 
 //extern void CreatePDFDocument(UInt8 *data, CFIndex length);
 //extern bool PdfExists();
@@ -17,11 +20,31 @@
 //extern CGImageRef RenderPdfToImage(size_t pageNumber, int width, int height);
 
 namespace Poppler {
+    class TextBox
+    {
+        friend class Page;
+        
+    public:
+        QString text() const;
+        QRectF boundingBox() const;
+        TextBox *nextWord() const;
+    };
+
     class Page {
     public:
+        enum Rotation
+        {
+            Rotate0 = 0, ///< Do not rotate
+            Rotate90 = 1, ///< Rotate 90 degrees clockwise
+            Rotate180 = 2, ///< Rotate 180 degrees
+            Rotate270 = 3 ///< Rotate 270 degrees clockwise (90 degrees counterclockwise)
+        };
+        
         QSizeF pageSizeF() const;
         QImage renderToImage(double xres = 72.0, double yres = 72.0) const;
-    };
+        QList<TextBox *> textList(Rotation rotate = Rotate0) const;
+        QImage thumbnail() const;
+   };
 
     class Document {
     public:
@@ -43,6 +66,7 @@ namespace Poppler {
         int numPages() const;
         Page *page(int index) const;
         QString info(const QString &type) const;
+        static Document *load(const QString &filePath, const QByteArray &ownerPassword = QByteArray(), const QByteArray &userPassword = QByteArray());
     };
 }
 

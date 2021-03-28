@@ -105,6 +105,26 @@ static CGContextRef CreateBitmapContext(int pixelsWide, int pixelsHigh)
 }
 
 namespace Poppler {
+    QSizeF Page::pageSizeF() const
+    {
+        
+    }
+    
+    QImage Page::renderToImage(double xres, double yres) const
+    {
+        
+    }
+
+    QList<TextBox *> Page::textList(Rotation rotate) const
+    {
+        
+    }
+
+    QImage Page::thumbnail() const
+    {
+        
+    }
+
     Document *Document::loadFromData(const QByteArray &fileContents)
     {
     }
@@ -124,6 +144,26 @@ namespace Poppler {
     }
     
     QString Document::info(const QString &type) const
+    {
+        
+    }
+    
+    Document *Document::load(const QString &filePath, const QByteArray &ownerPassword, const QByteArray &userPassword)
+    {
+        
+    }
+
+    QString TextBox::text() const
+    {
+        
+    }
+    
+    QRectF TextBox::boundingBox() const
+    {
+        
+    }
+    
+    TextBox *TextBox::nextWord() const
     {
         
     }
