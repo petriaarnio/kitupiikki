@@ -1246,6 +1246,8 @@
 		CB91E2712660C9AA00A2FAA2 /* moc_sahkopostitoimittaja.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = CB91E24A2660C9A900A2FAA2 /* moc_sahkopostitoimittaja.cpp */; };
 		CB91E2722660C9AA00A2FAA2 /* moc_laskuntoimittaja.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = CB91E24B2660C9A900A2FAA2 /* moc_laskuntoimittaja.cpp */; };
 		CB91E2732660C9AA00A2FAA2 /* moc_eranvalintadialog.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = CB91E24C2660C9A900A2FAA2 /* moc_eranvalintadialog.cpp */; };
+		CB91E2762661068B00A2FAA2 /* pdf.mm in Compile Sources */ = {isa = PBXBuildFile; fileRef = CB91E2752661068B00A2FAA2 /* pdf.mm */; };
+		CB91E27B26621A4500A2FAA2 /* macanalyzerdocument.mm in Compile Sources */ = {isa = PBXBuildFile; fileRef = CB91E27A26621A4500A2FAA2 /* macanalyzerdocument.mm */; };
 		CB9240322541EBA200907CFD /* moc_mimecontentformatter.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = CB9240232541EBA000907CFD /* moc_mimecontentformatter.cpp */; };
 		CB9240332541EBA200907CFD /* moc_tilivalintadialogifiltteri.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = CB9240242541EBA000907CFD /* moc_tilivalintadialogifiltteri.cpp */; };
 		CB9240342541EBA200907CFD /* moc_mimemultipart.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = CB9240252541EBA100907CFD /* moc_mimemultipart.cpp */; };
@@ -3124,6 +3126,10 @@
 		CB91E24B2660C9A900A2FAA2 /* moc_laskuntoimittaja.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = moc_laskuntoimittaja.cpp; sourceTree = "<group>"; };
 		CB91E24C2660C9A900A2FAA2 /* moc_eranvalintadialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = moc_eranvalintadialog.cpp; sourceTree = "<group>"; };
 		CB91E24D2660C9A900A2FAA2 /* ui_eranvalintadialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ui_eranvalintadialog.h; sourceTree = "<group>"; };
+		CB91E2742661068A00A2FAA2 /* pdf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pdf.h; sourceTree = "<group>"; };
+		CB91E2752661068B00A2FAA2 /* pdf.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = pdf.mm; sourceTree = "<group>"; };
+		CB91E27A26621A4500A2FAA2 /* macanalyzerdocument.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = macanalyzerdocument.mm; sourceTree = "<group>"; };
+		CB91E27C26625A7C00A2FAA2 /* macanalyzerdocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = macanalyzerdocument.h; sourceTree = "<group>"; };
 		CB9240232541EBA000907CFD /* moc_mimecontentformatter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = moc_mimecontentformatter.cpp; sourceTree = "<group>"; };
 		CB9240242541EBA000907CFD /* moc_tilivalintadialogifiltteri.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = moc_tilivalintadialogifiltteri.cpp; sourceTree = "<group>"; };
 		CB9240252541EBA100907CFD /* moc_mimemultipart.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = moc_mimemultipart.cpp; sourceTree = "<group>"; };
@@ -4246,20 +4252,24 @@
 		CB91D8E72660C7CB00A2FAA2 /* pdf */ = {
 			isa = PBXGroup;
 			children = (
+				CB91E2742661068A00A2FAA2 /* pdf.h */,
+				CB91E2752661068B00A2FAA2 /* pdf.mm */,
 				CB91D8E82660C7CB00A2FAA2 /* pdfanalyzerword.h */,
-				CB91D8E92660C7CB00A2FAA2 /* poppleranalyzerdocument.h */,
-				CB91D8EA2660C7CB00A2FAA2 /* pdfanalyzerrow.h */,
 				CB91D8EB2660C7CB00A2FAA2 /* pdfanalyzerword.cpp */,
+				CB91D8F42660C7CB00A2FAA2 /* pdfanalyzertext.h */,
 				CB91D8EC2660C7CB00A2FAA2 /* pdfanalyzertext.cpp */,
+				CB91D8EA2660C7CB00A2FAA2 /* pdfanalyzerrow.h */,
 				CB91D8ED2660C7CB00A2FAA2 /* pdfanalyzerrow.cpp */,
+				CB91D8F22660C7CB00A2FAA2 /* pdfanalyzerpage.h */,
 				CB91D8EE2660C7CB00A2FAA2 /* pdfanalyzerpage.cpp */,
-				CB91D8EF2660C7CB00A2FAA2 /* popplerrendererdocument.cpp */,
 				CB91D8F02660C7CB00A2FAA2 /* pdftoolkit.cpp */,
 				CB91D8F12660C7CB00A2FAA2 /* pdftoolkit.h */,
-				CB91D8F22660C7CB00A2FAA2 /* pdfanalyzerpage.h */,
+				CB91D8E92660C7CB00A2FAA2 /* poppleranalyzerdocument.h */,
 				CB91D8F32660C7CB00A2FAA2 /* poppleranalyzerdocument.cpp */,
-				CB91D8F42660C7CB00A2FAA2 /* pdfanalyzertext.h */,
 				CB91D8F52660C7CB00A2FAA2 /* popplerrendererdocument.h */,
+				CB91D8EF2660C7CB00A2FAA2 /* popplerrendererdocument.cpp */,
+				CB91E27A26621A4500A2FAA2 /* macanalyzerdocument.mm */,
+				CB91E27C26625A7C00A2FAA2 /* macanalyzerdocument.h */,
 			);
 			path = pdf;
 			sourceTree = "<group>";
@@ -6997,6 +7007,7 @@
 				CB91E24F2660C9AA00A2FAA2 /* moc_huoneistoeranvalintadialog.cpp in Compile Sources */,
 				CB91E1382660C7D100A2FAA2 /* tositeloki.cpp in Compile Sources */,
 				B45FDAF310D746990B7F2AAA /* moc_avauserakantamodel.cpp in Compile Sources */,
+				CB91E27B26621A4500A2FAA2 /* macanalyzerdocument.mm in Compile Sources */,
 				CB91DE412660C7CF00A2FAA2 /* kielet.cpp in Compile Sources */,
 				2C1EFA01B11D91A41B75CACB /* moc_avauseramodel.cpp in Compile Sources */,
 				CB91DE402660C7CF00A2FAA2 /* kieli.cpp in Compile Sources */,
@@ -7323,6 +7334,7 @@
 				8253715B302098FD13133C57 /* moc_tilimuuntomodel.cpp in Compile Sources */,
 				B1F2625FE51B428D99DBF400 /* moc_devtool.cpp in Compile Sources */,
 				CB91E1482660C7D100A2FAA2 /* yhteysmodel.cpp in Compile Sources */,
+				CB91E2762661068B00A2FAA2 /* pdf.mm in Compile Sources */,
 				33F6BCD610544E7AA21472A3 /* moc_lisaikkuna.cpp in Compile Sources */,
 				CB91E1A92660C7D100A2FAA2 /* BitBuffer.cpp in Compile Sources */,
 				CB91DEF12660C7D000A2FAA2 /* paakirja.cpp in Compile Sources */,

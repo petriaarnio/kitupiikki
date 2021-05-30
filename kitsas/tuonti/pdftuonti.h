@@ -20,14 +20,7 @@
 
 #include <QVariantMap>
 
-
-namespace Poppler {
-  class Document;
-}
-
 namespace Tuonti {
-
-
 
 /**
  * @brief Pdf-tiedoston tietojen poiminta
