@@ -6,17 +6,31 @@
 //  Copyright © 2021 Atfos Oy. All rights reserved.
 //
 
-#ifndef macanalyzerdocument_h
-#define macanalyzerdocument_h
+/*
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ 
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ 
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
 
-#import <Foundation/Foundation.h>
+#ifndef MACANALYZERDOCUMENT_H
+#define MACANALYZERDOCUMENT_H
+
 #include "pdftoolkit.h"
 
 class MacAnalyzerDocument : public PdfAnalyzerDocument
 {
 public:
     MacAnalyzerDocument(const QByteArray& data);
-    ~MacAnalyzerDocument();
+    ~PopplerAnalyzerDocument();
     
     virtual int pageCount() override;
     virtual PdfAnalyzerPage page(int page) override;
@@ -25,8 +39,9 @@ public:
     
     
 private:
-    CGPDFDocumentRef pdfDoc_ = NULL;
-    bool isUnlocked_ = false;
+    Poppler::Document *pdfDoc_ = nullptr;
+    
+    
 };
 
-#endif /* macanalyzerdocument_h */
+#endif // MACANALYZERDOCUMENT_H

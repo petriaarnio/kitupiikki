@@ -6,38 +6,57 @@
 //  Copyright © 2021 Atfos Oy. All rights reserved.
 //
 
-#include <QMap>
+/*
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ 
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ 
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+#import <Foundation/Foundation.h>
 #include "macanalyzerdocument.h"
 #include "pdfanalyzerpage.h"
 
-static CGPDFDocumentRef CreatePDFDocument(const UInt8 *data, const CFIndex length);
+#include <iostream>
+
+#include <QMap>
 
 MacAnalyzerDocument::MacAnalyzerDocument(const QByteArray &data)
 {
-    pdfDoc_ = CreatePDFDocument((const UInt8 *)data.constData(), data.size());
-    isUnlocked_ = CGPDFDocumentIsUnlocked(pdfDoc_);
+    pdfDoc_ = Poppler::Document::loadFromData(data);
 }
 
 MacAnalyzerDocument::~MacAnalyzerDocument()
 {
-    CGPDFDocumentRelease(pdfDoc_);
+    if( pdfDoc_)
+        delete pdfDoc_;
 }
 
 int MacAnalyzerDocument::pageCount()
 {
-    return (pdfDoc_ && isUnlocked_) ? (int)CGPDFDocumentGetNumberOfPages(pdfDoc_) : 0;
+    if(pdfDoc_ && !pdfDoc_->isLocked())
+        return pdfDoc_->numPages();
+    else
+        return 0;
 }
 
 PdfAnalyzerPage MacAnalyzerDocument::page(int page)
 {
     PdfAnalyzerPage result;
-    if (pdfDoc_ && isUnlocked_) {
+    if( pdfDoc_ && !pdfDoc_->isLocked()) {
         
-        CGPDFPageRef sivu = CGPDFDocumentGetPage(pdfDoc_, page);
-        QMap<int, PdfAnalyzerRow> rows;
+        Poppler::Page *sivu = pdfDoc_->page(page);
+        QMap<int,PdfAnalyzerRow> rows;
         
-        if (sivu) {
-            result.setSize( QSizeF::fromCGSize(CGPDFPageGetBoxRect(sivu, kCGPDFCropBox).size) );
+        if( sivu) {
+            result.setSize( sivu->pageSizeF() );
             
             auto lista = sivu->textList();
             for(int i=0; i < lista.count(); i++) {
@@ -50,17 +69,17 @@ PdfAnalyzerPage MacAnalyzerDocument::page(int page)
                     
                     ptr = ptr->nextWord();
                     if( ptr )
-                    i++;
+                        i++;
                 }
                 int indeksi = qRound( text.boundingRect().top() );
                 if( rows.contains(indeksi-1) )
-                indeksi = indeksi -1;
+                    indeksi = indeksi -1;
                 else if( rows.contains(indeksi+1))
-                indeksi = indeksi + 1;
+                    indeksi = indeksi + 1;
                 
                 // Jätetään pois sivumarginaalia
                 if( text.boundingRect().right() > 25)
-                rows[indeksi].addText(text);
+                    rows[indeksi].addText(text);
             }
             delete sivu;
         }
@@ -69,6 +88,11 @@ PdfAnalyzerPage MacAnalyzerDocument::page(int page)
         while(iter.hasNext()) {
             iter.next();
             result.addRow(iter.value());
+            
+            //            std::cerr << iter.key() << "   ";
+            //            for(auto text: iter.value().textList() )
+            //                std::cerr << text.text().toStdString() << " # ";
+            //            std::cerr << "\n";
         }
     }
     
@@ -77,33 +101,16 @@ PdfAnalyzerPage MacAnalyzerDocument::page(int page)
 
 QList<PdfAnalyzerPage> MacAnalyzerDocument::allPages()
 {
-    
+    QList<PdfAnalyzerPage> pages;
+    for(int i=0; i < pageCount(); i++)
+        pages.append( page(i) );
+    return pages;
 }
 
 QString MacAnalyzerDocument::title() const
 {
-    
-}
-
-static CGPDFDocumentRef CreatePDFDocument(const UInt8 *data, const CFIndex length)
-{
-    CFDataRef pdfData = CFDataCreateWithBytesNoCopy(NULL, data, length, NULL);
-    if (pdfData == NULL)
-    {
-        fprintf(stderr, "CFData not created for PDF");
-        return NULL;
-    }
-    
-    CGDataProviderRef dataProvider = CGDataProviderCreateWithCFData(pdfData);
-    CGPDFDocumentRef document = CGPDFDocumentCreateWithProvider(dataProvider);
-    CGDataProviderRelease(dataProvider);
-    CFRelease(data);
-    
-    size_t count = CGPDFDocumentGetNumberOfPages (document);
-    if (count == 0) {
-        printf("PDF needs at least one page!");
-        return NULL;
-    }
-    
-    return document;
+    if( pdfDoc_)
+        return pdfDoc_->title();
+    else
+        return QString();
 }
