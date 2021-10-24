@@ -24,13 +24,15 @@
 #ifndef MACANALYZERDOCUMENT_H
 #define MACANALYZERDOCUMENT_H
 
+#import <Quartz/Quartz.h>
+#include <poppler/qt5/poppler-qt5.h>
 #include "pdftoolkit.h"
 
 class MacAnalyzerDocument : public PdfAnalyzerDocument
 {
 public:
     MacAnalyzerDocument(const QByteArray& data);
-    ~PopplerAnalyzerDocument();
+    ~MacAnalyzerDocument();
     
     virtual int pageCount() override;
     virtual PdfAnalyzerPage page(int page) override;
@@ -39,9 +41,8 @@ public:
     
     
 private:
-    Poppler::Document *pdfDoc_ = nullptr;
-    
-    
+    QList<<#typename T#>> textList(PDFPage *sivu) const;
+    PDFDocument *pdfDoc_ = nullptr;
 };
 
 #endif // MACANALYZERDOCUMENT_H

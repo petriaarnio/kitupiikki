@@ -27,22 +27,24 @@
 #include <iostream>
 
 #include <QMap>
+#include <QSizeF>
 
 MacAnalyzerDocument::MacAnalyzerDocument(const QByteArray &data)
 {
-    pdfDoc_ = Poppler::Document::loadFromData(data);
+    NSData *nsData = data.toNSData();
+    pdfDoc_ = [[PDFDocument alloc] initWithData:nsData];
 }
 
 MacAnalyzerDocument::~MacAnalyzerDocument()
 {
     if( pdfDoc_)
-        delete pdfDoc_;
+        [pdfDoc_ release];
 }
 
 int MacAnalyzerDocument::pageCount()
 {
-    if(pdfDoc_ && !pdfDoc_->isLocked())
-        return pdfDoc_->numPages();
+    if(pdfDoc_ && ![pdfDoc_ isLocked])
+        return (int)[pdfDoc_ pageCount];
     else
         return 0;
 }
@@ -50,14 +52,16 @@ int MacAnalyzerDocument::pageCount()
 PdfAnalyzerPage MacAnalyzerDocument::page(int page)
 {
     PdfAnalyzerPage result;
-    if( pdfDoc_ && !pdfDoc_->isLocked()) {
+    if( pdfDoc_ && ![pdfDoc_ isLocked]) {
         
-        Poppler::Page *sivu = pdfDoc_->page(page);
+        PDFPage *sivu = [pdfDoc_ pageAtIndex:page];
         QMap<int,PdfAnalyzerRow> rows;
         
         if( sivu) {
-            result.setSize( sivu->pageSizeF() );
-            
+            CGSize cgSize = [sivu boundsForBox:kPDFDisplayBoxCropBox].size;
+            QSizeF qSize = QSizeF::fromCGSize(cgSize);
+            result.setSize(qSize);
+
             auto lista = sivu->textList();
             for(int i=0; i < lista.count(); i++) {
                 auto ptr = lista.at(i);
@@ -81,7 +85,7 @@ PdfAnalyzerPage MacAnalyzerDocument::page(int page)
                 if( text.boundingRect().right() > 25)
                     rows[indeksi].addText(text);
             }
-            delete sivu;
+            [sivu release];
         }
         
         QMapIterator<int,PdfAnalyzerRow> iter(rows);
