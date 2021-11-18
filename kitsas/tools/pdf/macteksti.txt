@@ -1,0 +1,194 @@
+2021-10-25 20:41:16.202195+0300 Kitsas[1570:57916]  LASKU
+Summa Eräpäivä Viitenumero Asiakasnumero
+LASKUN TIEDOT
+Laskun päiväys
+Laskun numero
+Seuraavan laskun arvioitu eräpäivä Sähköpostilasku
+S-Etukortti
+Maksajan yritystunnus
+Sivu 1 (2)
+PL 1, 00061 ELISA
+Aarnio Biz Oy
+Petri Aarnio Metsämiehenkatu 4 20660 LITTOINEN
+11,72 24.9.2021 80 36481 69296 26622518
+10.9.2021 90357844621 25.10.2021 petri@aarnio.biz 1240112386 2846968-7
+VEROERITTELY Veroton Vero
+Verollinen 5,08 6,64 11,72
+EUROA
+6,64 0,08 5,00
+11,72
+Edellinen lasku ja maksut
+EUR
+Edellisen laskun summa Suoritus 11.08.2021
+Suoritus 24.08.2021
+Maksettavaa 08.09.2021
+49,80 -24,90
+-24,90
+0,00
+TUOTE
+Saunalahti Kotikuitu
+Viivästyskorko, lasku 90353253070 (27.07.2021 - 11.08.2021) Maksukehotus (10-08-2021) - 90353253070
+ALV 0 % ALV 24 % Yhteensä
+KÄYTTÄJÄ
+Aarnio Petri
+5,08 0,00
+5,35 1,29 10,43 1,29
+HINTA ALENNUS
+SOPIMUS
+86797816
+10,64
+-4,00
+YHTEENSÄ
+JATKUU SEURAAVALLA SIVULLA
+Elisa Oyj, PL 1, 00061 ELISA, Y-tunnus 0116510-6, Alv-numero FI01165106, Kotipaikka: Helsinki
+IBAN
+DANSKE BANK A/S NORDEA
+OP
+FI05 8000 1470 8245 75 FI71 1439 3000 1040 78 FI75 5000 0120 2346 45
+Elisa Oyj
+PL 1
+00061 ELISA
+Saajan tilinumero Mottagarens kontonummer
+Saaja Mottagare
+Maksajan nimi ja osoite Betalarens namn och address
+Allekirjoitus Underskrift
+Tililtä Från konto nr
+BIC
+DABAFIHH NDEAFIHH OKOYFIHH
+Aarnio Biz Oy
+Petri Aarnio Metsämiehenkatu 4 20660 LITTOINEN
+Viivästyskorko korkolain mukainen. Maksukehotusmaksu hinnaston mukaisesti.
+Käytäthän viitenumeroa maksaessasi. Mikäli viitenumeroa ei ole käytetty maksun yhteydessä, perimme hinnaston mukaisen palvelumaksun maksun kohdistamisesta.
+Virtuaaliviivakoodi: 405800014708245750000117200000000000803648169296210924
+Viitenro Ref. nr
+80 36481 69296
+Euro
+11,72
+Eräpäivä Förf. dag
+24.09.2021
+Maksu välitetään saajalle maksujenvälityksen ehtojen mukaisesti ja vain maksajan ilmoittaman tilinumeron perusteella.
+Betalningen förmedlas till mottagaren enligt villkoren för betalning-
+förmedling och endast till det kontonummer som betalaren angivit.
+PANKKI BANKEN
+TILISIIRTO GIRERING
+364816929 20210908190051100_bf.OMA_Strs_RG0209081.20210908.output.OMA_S000000004.20210908163406_0_nonPaper.xml
+
+
+
+2021-10-27 18:07:29.465945+0300 Kitsas[1834:90985] 32
+2021-10-27 18:07:29.466010+0300 Kitsas[1834:90985] X: 2.318909
+2021-10-27 18:07:29.466032+0300 Kitsas[1834:90985] Y: 795.453900
+2021-10-27 18:07:29.466046+0300 Kitsas[1834:90985] Length: 181.854500
+2021-10-27 18:07:29.466067+0300 Kitsas[1834:90985] Height: 43.299640
+2021-10-27 18:07:29.466083+0300 Kitsas[1834:90985] 76
+2021-10-27 18:07:29.466097+0300 Kitsas[1834:90985] X: 324.414421
+2021-10-27 18:07:29.466111+0300 Kitsas[1834:90985] Y: 793.930583
+2021-10-27 18:07:29.466124+0300 Kitsas[1834:90985] Length: 8.891818
+2021-10-27 18:07:29.466138+0300 Kitsas[1834:90985] Height: 17.863598
+2021-10-27 18:07:29.466153+0300 Kitsas[1834:90985] 65
+2021-10-27 18:07:29.466165+0300 Kitsas[1834:90985] X: 333.306239
+2021-10-27 18:07:29.466179+0300 Kitsas[1834:90985] Y: 793.930583
+2021-10-27 18:07:29.466199+0300 Kitsas[1834:90985] Length: 10.666983
+2021-10-27 18:07:29.466211+0300 Kitsas[1834:90985] Height: 17.863598
+2021-10-27 18:07:29.466225+0300 Kitsas[1834:90985] 83
+2021-10-27 18:07:29.466236+0300 Kitsas[1834:90985] X: 343.973222
+2021-10-27 18:07:29.466249+0300 Kitsas[1834:90985] Y: 793.930583
+2021-10-27 18:07:29.466261+0300 Kitsas[1834:90985] Length: 10.666983
+2021-10-27 18:07:29.466534+0300 Kitsas[1834:90985] Height: 17.863598
+2021-10-27 18:07:29.466560+0300 Kitsas[1834:90985] 75
+2021-10-27 18:07:29.466574+0300 Kitsas[1834:90985] X: 354.640205
+2021-10-27 18:07:29.466588+0300 Kitsas[1834:90985] Y: 793.930583
+2021-10-27 18:07:29.466601+0300 Kitsas[1834:90985] Length: 10.666983
+2021-10-27 18:07:29.466614+0300 Kitsas[1834:90985] Height: 17.863598
+
+
+2021-11-17 19:08:26.791846+0200 Kitsas[2773:27924] Width: 595.280000
+2021-11-17 19:08:26.791899+0200 Kitsas[2773:27924] Height: 841.890000
+2021-11-17 19:08:26.791916+0200 Kitsas[2773:27924] QWidth: 595.280000
+2021-11-17 19:08:26.791928+0200 Kitsas[2773:27924] QHeight: 841.890000
+-31   som # betalaren #
+-15   angivit. #  # PANKKI # BANKEN # TILISIIRTO # GIRERING # 364816929 #
+0   20210908190051100_bf.OMA_Strs_RG0209081.20210908.output.OMA_S000000004.20210908163406_0_nonPaper.xml #
+21   det # kontonummer #
+25   mottagaren # enligt # villkoren # för # betalning- # förmedling # och # endast # till #
+33   ilmoittaman # tilinumeron # perusteella. # Betalningen # förmedlas # till #
+40   ehtojen # mukaisesti # ja # vain # maksajan #
+47   Eräpäivä # Förf. # dag # 24.09.2021 #  #  # Maksu # välitetään # saajalle # maksujenvälityksen #
+59   11,72 #  #  #  #  #  # Ref. #
+61   Underskrift # 69296 # Euro #
+65   Viitenro #
+70   Allekirjoitus # 36481 #
+80   80 #
+82   address #
+84   405800014708245750000117200000000000803648169296210924 #  #  #
+90   namn # och #
+93   nr #
+110   kohdistamisesta. # Virtuaaliviivakoodi: #
+122   Betalarens # Aarnio # palvelumaksun # maksun #
+131   osoite #
+136   Biz # Oy # Petri #
+139   Maksajan # nimi # ja #
+149   OKOYFIHH #  #  # Aarnio #
+156   Mottagare #
+162   NDEAFIHH #
+164   kontonummer # Saaja #
+167   perimme # hinnaston # mukaisen #
+176   maksaessasi. # Mikäli # viitenumeroa # ei # ole # käytetty # maksun # yhteydessä, #
+186   45 # Elisa # Oyj # hinnaston # mukaisesti. # Käytäthän # viitenumeroa #
+198   2346 #
+203   Maksukehotusmaksu #
+206   Mottagarens #
+210   5000 # 0120 #
+212   Metsämiehenkatu # 4 # 20660 # LITTOINEN # Viivästyskorko # korkolain # mukainen. #
+223   DABAFIHH #
+237   tilinumero #
+243   DANSKE # 1439 # 3000 # 1040 # 78 # FI75 # BIC #
+246   Saajan #
+254   00061 # ELISA # IBAN # 8000 # 1470 # 8245 # 75 # FI71 # konto # nr #
+263   PL # 1 #
+266   Helsinki #  #  #  # BANK # A/S # NORDEA # OP # FI05 # Från #
+276   Kotipaikka: # Tililtä #
+289   SEURAAVALLA # SIVULLA #  # Elisa # Oyj, # PL # 1, # 00061 # ELISA, # Y-tunnus # 0116510-6, # Alv-numero # FI01165106, #
+408   -4,00 # YHTEENSÄ #  # JATKUU #
+433   86797816 # 6,64 # 0,08 #
+445   10,64 # 11.08.2021) # Maksukehotus # (10-08-2021) # - # EUROA #
+456   Saunalahti # Kotikuitu # Viivästyskorko, # lasku # 90353253070 # (27.07.2021 # - #
+466   0,00 #  #  # TUOTE # ALENNUS # Yhteensä # SOPIMUS #  # 11,72 #
+479   -24,90 # 1,29 # HINTA # 24 # % # 1,29 # 10,43 # 6,64 #
+530   24.08.2021 # Maksettavaa # -24,90 #
+543   11.08.2021 # Suoritus # 49,80 #
+556   laskun # summa # Suoritus # 08.09.2021 #
+567   maksut #  # EUR #  # Edellisen #
+584   lasku #
+587   5,00 # 11,72 #  # Edellinen # ja #
+603   0 # % # ALV # 5,08 # 0,00 # 5,35 # Verollinen # 5,08 #
+613   90353253070 # ALV # Petri #
+623   KÄYTTÄJÄ # Aarnio #
+633   2846968-7 #  #  # VEROERITTELY # Veroton # Vero #
+645   1240112386 #
+649   S-Etukortti # Maksajan #
+659   Sähköpostilasku # petri@aarnio.biz #
+669   eräpäivä # 25.10.2021 #
+679   numero # Seuraavan # laskun # arvioitu # 90357844621 #
+690   päiväys # Laskun # 26622518 # 10.9.2021 #
+700   TIEDOT # Laskun # 69296 #
+706   Metsämiehenkatu # 4 #
+710   Asiakasnumero # LASKUN #
+716   Petri # Aarnio #
+727   Aarnio # Biz # Oy #
+737   00061 # ELISA #
+739   Viitenumero # 36481 #
+751   Eräpäivä # 11,72 # 24.9.2021 # 80 #
+758   Sivu # 1 # (2) #  # PL # 1, #
+763   LITTOINEN #
+775   Summa # 20660 #
+794   LASKU #
+796   yritystunnus #
+
+
+2021-11-17 19:31:44.690372+0200 Kitsas[3375:67908] EKA: 0.000000
+LASKU
+X: 376.853758
+Y: 793.930583
+Length: 49.000000
+Height: 17.863598

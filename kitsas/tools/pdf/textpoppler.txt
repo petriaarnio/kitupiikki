@@ -1,0 +1,147 @@
+LASKU
+X: 324.414
+Y: 30.0958
+Length: 52.4393
+Height: 17.8636
+
+Mac
+LASKU
+X: 376.853758
+Y: 793.930583
+Length: 49.000000
+Height: 17.863598
+
+
+
+LASKU
+Summa
+Eräpäivä
+Viitenumero
+Asiakasnumero
+PL 1, 00061 ELISA
+Aarnio Biz Oy
+Petri Aarnio
+Metsämiehenkatu 4
+20660 LITTOINEN
+20210908190051100_bf.OMA_Strs_RG0209081.20210908.output.OMA_S000000004.20210908163406_0_nonPaper.xml
+Sivu 1 (2)
+11,72
+24.9.2021
+80 36481 69296
+26622518
+LASKUN TIEDOT
+Laskun päiväys
+Laskun numero
+Seuraavan laskun arvioitu eräpäivä
+Sähköpostilasku
+S-Etukortti
+Maksajan yritystunnus
+VEROERITTELY
+ALV 0 %
+ALV 24 %
+Yhteensä
+10.9.2021
+90357844621
+25.10.2021
+petri@aarnio.biz
+1240112386
+2846968-7
+Veroton
+5,08
+5,35
+10,43
+Vero
+0,00
+1,29
+1,29
+Verollinen
+5,08
+6,64
+11,72
+Edellinen lasku ja maksut
+EUR
+Edellisen laskun summa
+Suoritus 11.08.2021
+49,80
+-24,90
+Suoritus 24.08.2021
+-24,90
+364816929
+Maksettavaa 08.09.2021
+TUOTE
+SOPIMUS
+KÄYTTÄJÄ
+Saunalahti Kotikuitu
+86797816
+Aarnio Petri
+Viivästyskorko, lasku 90353253070 (27.07.2021 - 11.08.2021)
+Maksukehotus (10-08-2021) - 90353253070
+0,00
+HINTA
+10,64
+ALENNUS
+-4,00
+YHTEENSÄ
+EUROA
+6,64
+0,08
+5,00
+11,72
+JATKUU SEURAAVALLA SIVULLA
+Elisa Oyj, PL 1, 00061 ELISA, Y-tunnus 0116510-6, Alv-numero FI01165106, Kotipaikka: Helsinki
+IBAN
+Saajan
+tilinumero
+Mottagarens
+kontonummer
+TILISIIRTO GIRERING
+Saaja
+Mottagare
+Maksajan
+nimi ja
+osoite
+Betalarens
+namn och
+address
+Allekirjoitus
+Underskrift
+Tililtä
+Från konto nr
+DANSKE BANK A/S
+NORDEA
+OP
+Elisa Oyj
+PL 1
+00061 ELISA
+Aarnio Biz Oy
+Petri Aarnio
+Metsämiehenkatu 4
+20660 LITTOINEN
+FI05 8000 1470 8245 75
+FI71 1439 3000 1040 78
+FI75 5000 0120 2346 45
+BIC
+DABAFIHH
+NDEAFIHH
+OKOYFIHH
+Viivästyskorko korkolain mukainen. Maksukehotusmaksu hinnaston
+mukaisesti.
+Käytäthän viitenumeroa maksaessasi. Mikäli viitenumeroa ei
+ole käytetty maksun yhteydessä, perimme hinnaston mukaisen
+palvelumaksun maksun kohdistamisesta.
+Virtuaaliviivakoodi:
+405800014708245750000117200000000000803648169296210924
+Viitenro
+Ref. nr
+Eräpäivä
+Förf. dag
+80 36481 69296
+24.09.2021
+Euro
+11,72
+Maksu välitetään saajalle maksujenvälityksen ehtojen mukaisesti ja vain maksajan
+ilmoittaman tilinumeron perusteella.
+Betalningen förmedlas till mottagaren enligt villkoren för betalning-
+förmedling och endast till det kontonummer som betalaren angivit.
+PANKKI BANKEN
+

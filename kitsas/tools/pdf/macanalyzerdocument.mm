@@ -57,33 +57,70 @@ PdfAnalyzerPage MacAnalyzerDocument::page(int page)
         PDFPage *sivu = [pdfDoc_ pageAtIndex:page];
         QMap<int,PdfAnalyzerRow> rows;
         
-        if( sivu) {
+        if (sivu) {
             CGSize cgSize = [sivu boundsForBox:kPDFDisplayBoxCropBox].size;
-            QSizeF qSize = QSizeF::fromCGSize(cgSize);
-            result.setSize(qSize);
+            NSLog(@"Width: %f", cgSize.width);
+            NSLog(@"Height: %f", cgSize.height);
 
-            auto lista = sivu->textList();
-            for(int i=0; i < lista.count(); i++) {
-                auto ptr = lista.at(i);
+            QSizeF qSize = QSizeF::fromCGSize(cgSize);
+            NSLog(@"QWidth: %f", qSize.width());
+            NSLog(@"QHeight: %f", qSize.height());
+
+            result.setSize(qSize);
+            NSString *pageText = [sivu string];
+            //NSArray *words = [text componentsSeparatedByString:@" "];
+            NSUInteger pageTextLen = [pageText length];
+            for (NSUInteger i = 0; i < pageTextLen; i++) {
+                CGRect firstCharacterBounds = [sivu characterBoundsAtIndex:i];
+                firstCharacterBounds.origin.y = cgSize.height - firstCharacterBounds.origin.y - firstCharacterBounds.size.height;
+                CGRect wordBounds;
+                wordBounds.origin = firstCharacterBounds.origin;
+                wordBounds.size.height = firstCharacterBounds.size.height;
+//                NSLog(@"EKA: %f", firstCharacterBounds.size.width);
+
                 PdfAnalyzerText text;
-                while(ptr) {
-                    text.addWord( ptr->boundingBox(),
-                                 ptr->text(),
-                                 ptr->hasSpaceAfter());
-                    
-                    ptr = ptr->nextWord();
-                    if( ptr )
-                        i++;
+                NSMutableString *word = [NSMutableString string];
+                NSUInteger wordWidth = 0;
+                for (NSUInteger j = 0; j < pageTextLen; j++) {
+                    unichar character = [pageText characterAtIndex:(i + j)];
+                    if (character == ' ' || character == '\n') {
+                        i += j;
+                        break;
+                    }
+                    [word appendFormat:@"%C", character];
+                    CGRect characterBounds = [sivu characterBoundsAtIndex:(i + j)];
+                    wordWidth += characterBounds.size.width;
                 }
+                if (![word length]) { continue; }
+                wordBounds.size.width = wordWidth;
+                QRectF qWordBounds = QRectF::fromCGRect(wordBounds);
+                QString qWord = QString::fromNSString(word);
+                text.addWord(qWordBounds, qWord, false);
+//                CGRect bounds = [sivu characterBoundsAtIndex:i];
+//                NSLog(@"%hu", [pageText characterAtIndex:i]);
+                NSLog(@"%@", word);
+                NSLog(@"-----------");
+                NSLog(@"X: %f", qWordBounds.x());
+                NSLog(@"Y: %f", qWordBounds.y());
+                NSLog(@"Length: %f", qWordBounds.width());
+                NSLog(@"Height: %f", qWordBounds.height());
+                NSLog(@"");
+//                CGRect bounds:
+//                bounds.origin = [word characterBoundsAtIndex:0];
+
+//                text.addWord(QRectF::fromCGRect(bounds),
+//                             ,
+//                             ptr->hasSpaceAfter());
+
                 int indeksi = qRound( text.boundingRect().top() );
-                if( rows.contains(indeksi-1) )
-                    indeksi = indeksi -1;
-                else if( rows.contains(indeksi+1))
-                    indeksi = indeksi + 1;
-                
+                if( rows.contains(indeksi - 1) )
+                    indeksi--;
+                else if( rows.contains(indeksi + 1))
+                    indeksi++;
+
                 // Jätetään pois sivumarginaalia
                 if( text.boundingRect().right() > 25)
-                    rows[indeksi].addText(text);
+                  rows[indeksi].addText(text);
             }
             [sivu release];
         }
@@ -93,10 +130,10 @@ PdfAnalyzerPage MacAnalyzerDocument::page(int page)
             iter.next();
             result.addRow(iter.value());
             
-            //            std::cerr << iter.key() << "   ";
-            //            for(auto text: iter.value().textList() )
-            //                std::cerr << text.text().toStdString() << " # ";
-            //            std::cerr << "\n";
+                        std::cerr << iter.key() << "   ";
+                        for(auto text: iter.value().textList() )
+                            std::cerr << text.text().toStdString() << " # ";
+                        std::cerr << "\n";
         }
     }
     
@@ -114,7 +151,7 @@ QList<PdfAnalyzerPage> MacAnalyzerDocument::allPages()
 QString MacAnalyzerDocument::title() const
 {
     if( pdfDoc_)
-        return pdfDoc_->title();
+        return QString::fromNSString([pdfDoc_ documentAttributes][PDFDocumentTitleAttribute]);
     else
         return QString();
 }

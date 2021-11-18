@@ -17,6 +17,7 @@
 
 #include "pdftoolkit.h"
 #include "popplerrendererdocument.h"
+#include "poppleranalyzerdocument.h"
 #include "macanalyzerdocument.h"
 
 PdfRendererDocument *PdfToolkit::renderer(const QByteArray &data)
@@ -27,6 +28,7 @@ PdfRendererDocument *PdfToolkit::renderer(const QByteArray &data)
 PdfAnalyzerDocument *PdfToolkit::analyzer(const QByteArray &data)
 {
     return new MacAnalyzerDocument(data);
+    //return new PopplerAnalyzerDocument(data);
 }
 
 PdfRendererDocument::~PdfRendererDocument()

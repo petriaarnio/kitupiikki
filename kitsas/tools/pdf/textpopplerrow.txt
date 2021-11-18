@@ -1,0 +1,90 @@
+30   LASKU
+38   Sivu 1 (2)
+56   Summa 11,72
+68   Eräpäivä 24.9.2021
+76   PL 1, 00061 ELISA
+80   Viitenumero 80 36481 69296
+92   Asiakasnumero 26622518
+95   Aarnio Biz Oy
+105   Petri Aarnio
+115   Metsämiehenkatu 4
+123   LASKUN TIEDOT
+126   20660 LITTOINEN
+133   Laskun päiväys 10.9.2021
+143   Laskun numero 90357844621
+154   Seuraavan laskun arvioitu eräpäivä 25.10.2021
+164   Sähköpostilasku petri@aarnio.biz
+174   S-Etukortti 1240112386
+184   Maksajan yritystunnus 2846968-7
+200   VEROERITTELY Veroton Vero Verollinen
+210   ALV 0 % 5,08 0,00 5,08
+220   ALV 24 % 5,35 1,29 6,64
+230   Yhteensä 10,43 1,29 11,72
+246   Edellinen lasku ja maksut EUR
+266   Edellisen laskun summa 49,80
+277   Suoritus 11.08.2021 -24,90
+290   Suoritus 24.08.2021 -24,90
+303   Maksettavaa 08.09.2021 0,00
+353   TUOTE SOPIMUS KÄYTTÄJÄ HINTA ALENNUS EUROA
+366   Saunalahti Kotikuitu 86797816 Aarnio Petri 10,64 -4,00 6,64
+376   Viivästyskorko, lasku 90353253070 (27.07.2021 - 11.08.2021) 0,08
+387   Maksukehotus (10-08-2021) - 90353253070 5,00
+400   YHTEENSÄ 11,72
+422   JATKUU SEURAAVALLA SIVULLA
+546   Elisa Oyj, PL 1, 00061 ELISA, Y-tunnus 0116510-6, Alv-numero FI01165106, Kotipaikka: Helsinki
+559   IBAN BIC
+565   DANSKE BANK A/S FI05 8000 1470 8245 75 DABAFIHH
+572   Saajan
+577   NORDEA FI71 1439 3000 1040 78 NDEAFIHH
+581   tilinumero
+589   Mottagarens OP FI75 5000 0120 2346 45 OKOYFIHH
+597   kontonummer
+621   Elisa Oyj Viivästyskorko korkolain mukainen. Maksukehotusmaksu hinnaston
+629   Saaja mukaisesti.
+633   PL 1
+637   Mottagare
+645   00061 ELISA
+648   Käytäthän viitenumeroa maksaessasi. Mikäli viitenumeroa ei
+657   ole käytetty maksun yhteydessä, perimme hinnaston mukaisen
+666   palvelumaksun maksun kohdistamisesta.
+668   Aarnio Biz Oy
+671   Maksajan
+679   nimi ja
+681   Petri Aarnio
+687   osoite
+694   Metsämiehenkatu 4
+696   Betalarens
+704   namn och
+707   20660 LITTOINEN
+711   Virtuaaliviivakoodi:
+714   TILISIIRTO  address
+722   405800014708245750000117200000000000803648169296210924
+740   Viitenro
+745   Allekirjoitus
+747   80 36481 69296
+749   Ref. nr
+753   Underskrift
+765   Tililtä Eräpäivä
+770   Euro
+772   24.09.2021 11,72
+774   Från konto nr Förf. dag
+789   Maksu välitetään saajalle maksujenvälityksen ehtojen mukaisesti ja vain maksajan
+796   ilmoittaman tilinumeron perusteella.
+803   Betalningen förmedlas till mottagaren enligt villkoren för betalning-
+811   förmedling och endast till det kontonummer som betalaren angivit.
+815   PANKKI BANKEN
+
+30   LASKU 30.0958 #
+38   Sivu 1 (2) 38.0261 #
+56   Summa 56.1336 # 11,72 56.1336 #
+68   Eräpäivä 68.034 # 24.9.2021 68.034 #
+76   PL 1, 00061 ELISA 76.1751 #
+80   Viitenumero 79.9334 # 80 36481 69296 79.9334 #
+92   Asiakasnumero 91.8338 # 26622518 91.8338 #
+95   Aarnio Biz Oy 94.6934 #
+
+595.28 841.89
+2021-10-27 18:30:05.098068+0300 Kitsas[2798:134609] Width: 595.280000
+2021-10-27 18:30:05.098120+0300 Kitsas[2798:134609] Height: 841.890000
+2021-10-27 18:30:05.098137+0300 Kitsas[2798:134609] QWidth: 595.280000
+2021-10-27 18:30:05.098150+0300 Kitsas[2798:134609] QHeight: 841.890000

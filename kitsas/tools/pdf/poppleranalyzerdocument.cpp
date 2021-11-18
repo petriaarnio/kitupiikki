@@ -60,10 +60,16 @@ PdfAnalyzerPage PopplerAnalyzerDocument::page(int page)
                                   ptr->text(),
                                   ptr->hasSpaceAfter());
 
+                    std::cerr << ptr->text().toStdString() << ": " << (ptr->hasSpaceAfter() ? "has space" : "no space") << "\n";
                     ptr = ptr->nextWord();
                     if( ptr )
                         i++;
                 }
+                std::cerr << text.text().toStdString();
+                std::cerr << "X: " << text.boundingRect().x();
+                std::cerr << "Y: " << text.boundingRect().y();
+                std::cerr << "Length: " << text.boundingRect().width();
+                std::cerr << "Height: " << text.boundingRect().height();
                 int indeksi = qRound( text.boundingRect().top() );
                 if( rows.contains(indeksi-1) )
                     indeksi = indeksi -1;
@@ -84,7 +90,7 @@ PdfAnalyzerPage PopplerAnalyzerDocument::page(int page)
 
 //            std::cerr << iter.key() << "   ";
 //            for(auto text: iter.value().textList() )
-//                std::cerr << text.text().toStdString() << " # ";
+//                std::cerr << text.text().toStdString() << " " << text.boundingRect().top() <<" # ";
 //            std::cerr << "\n";
         }
     }    

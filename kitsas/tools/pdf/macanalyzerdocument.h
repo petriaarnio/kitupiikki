@@ -41,7 +41,7 @@ public:
     
     
 private:
-    QList<<#typename T#>> textList(PDFPage *sivu) const;
+//    QList<<#typename T#>> textList(PDFPage *sivu) const;
     PDFDocument *pdfDoc_ = nullptr;
 };
 
