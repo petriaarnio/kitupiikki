@@ -71,28 +71,48 @@ PdfAnalyzerPage MacAnalyzerDocument::page(int page)
             //NSArray *words = [text componentsSeparatedByString:@" "];
             NSUInteger pageTextLen = [pageText length];
             for (NSUInteger i = 0; i < pageTextLen; i++) {
-                CGRect firstCharacterBounds = [sivu characterBoundsAtIndex:i];
-                firstCharacterBounds.origin.y = cgSize.height - firstCharacterBounds.origin.y - firstCharacterBounds.size.height;
+                //CGRect firstCharacterBounds = [sivu characterBoundsAtIndex:i];
+                //firstCharacterBounds.origin.y = cgSize.height - firstCharacterBounds.origin.y - firstCharacterBounds.size.height;
                 CGRect wordBounds;
-                wordBounds.origin = firstCharacterBounds.origin;
-                wordBounds.size.height = firstCharacterBounds.size.height;
+                //wordBounds.origin = firstCharacterBounds.origin;
+                //wordBounds.size.height = firstCharacterBounds.size.height;
 //                NSLog(@"EKA: %f", firstCharacterBounds.size.width);
 
                 PdfAnalyzerText text;
                 NSMutableString *word = [NSMutableString string];
-                NSUInteger wordWidth = 0;
+//                NSUInteger wordWidth = 0;
+
+                CGRect charBounds = [sivu characterBoundsAtIndex:i];
+                wordBounds.origin = charBounds.origin;
+                wordBounds.size = charBounds.size;
+
                 for (NSUInteger j = 0; j < pageTextLen; j++) {
-                    unichar character = [pageText characterAtIndex:(i + j)];
+                    NSUInteger index = i + j;
+                    CGRect charBounds = [sivu characterBoundsAtIndex:index];
+                    if (charBounds.origin.y > wordBounds.origin.y) {
+                        wordBounds.origin.y = charBounds.origin.y;
+                    }
+                    if (charBounds.size.height > wordBounds.size.height) {
+                        wordBounds.size.height = charBounds.size.height;
+                    }
+                    wordBounds.size.width += charBounds.size.width;
+                    
+                    unichar character = [pageText characterAtIndex:index];
                     if (character == ' ' || character == '\n') {
                         i += j;
                         break;
                     }
-                    [word appendFormat:@"%C", character];
-                    CGRect characterBounds = [sivu characterBoundsAtIndex:(i + j)];
-                    wordWidth += characterBounds.size.width;
+                    NSLog(@"%c", character);
+                    NSLog(@"%f", charBounds.origin.x);
+                    NSLog(@"%f", charBounds.origin.y);
+                    NSLog(@"%f", charBounds.size.height);
+                    NSLog(@"%f", charBounds.size.width);
+                    NSLog(@"");
+                   [word appendFormat:@"%C", character];
                 }
                 if (![word length]) { continue; }
-                wordBounds.size.width = wordWidth;
+//                wordBounds.size.width = wordWidth;
+               // wordBounds.origin.y = cgSize.height - wordBounds.origin.y - wordBounds.size.height;
                 QRectF qWordBounds = QRectF::fromCGRect(wordBounds);
                 QString qWord = QString::fromNSString(word);
                 text.addWord(qWordBounds, qWord, false);
