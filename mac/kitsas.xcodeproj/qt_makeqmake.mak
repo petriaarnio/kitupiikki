@@ -320,6 +320,7 @@ kitsas.xcodeproj/project.pbxproj: ../kitsas/kitsas.pro ../../../Qt/6.5.3/macos/m
 		../kitsas/rekisteri/rekisteri.qrc \
 		../kitsas/sqlite/sqlite.qrc \
 		../kitsas/tilinpaatoseditori/tilinpaatos.qrc \
+		../kitsas/toimisto/qrc/web.qrc \
 		../kitsas/tr/tr.qrc \
 		../kitsas/tilikartat/tilikartat.qrc \
 		../kitsas/pic/pic.qrc \
@@ -657,6 +658,7 @@ kitsas.xcodeproj/project.pbxproj: ../kitsas/kitsas.pro ../../../Qt/6.5.3/macos/m
 ../kitsas/rekisteri/rekisteri.qrc:
 ../kitsas/sqlite/sqlite.qrc:
 ../kitsas/tilinpaatoseditori/tilinpaatos.qrc:
+../kitsas/toimisto/qrc/web.qrc:
 ../kitsas/tr/tr.qrc:
 ../kitsas/tilikartat/tilikartat.qrc:
 ../kitsas/pic/pic.qrc:
